@@ -6,7 +6,8 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'Valloric/YouCompleteMe'
+
+Plugin 'Valloric/YouCompleteMe' " please make sure that you have python-dev and ruby-dev installed :)
 Plugin 'mileszs/ack.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/vim-easymotion'
