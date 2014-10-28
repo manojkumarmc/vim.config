@@ -29,8 +29,9 @@ endfunction
       
 command -nargs=0 OpenNERDTree :call OpenNERDTree()
 
-nmap <ESC>t :OpenNERDTree<CR>
+nmap <ESC>t :NERDTreeToggle<CR>
 nmap <ESC>q :bd<CR>
+nmap <ESC>a :qa<CR>
 
 let g:EasyMotion_leader_key = ','
 
