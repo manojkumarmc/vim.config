@@ -30,6 +30,14 @@ endfunction
       
 command -nargs=0 OpenNERDTree :call OpenNERDTree()
 
+" Save session on quitting Vim
+autocmd VimLeave * NERDTreeClose
+autocmd VimLeave * mksession! Session.vim
+"
+" " Restore session on starting Vim
+"autocmd VimEnter * call MySessionRestoreFunction()
+autocmd VimEnter * NERDTree
+
 nmap <ESC>t :NERDTreeToggle<CR>
 nmap <ESC>q :bd<CR>
 nmap <ESC>a :qa<CR>
