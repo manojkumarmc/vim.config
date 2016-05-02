@@ -19,6 +19,7 @@ Plugin 'bling/vim-airline'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'einars/js-beautify'
 Plugin 'ervandew/supertab'
+Plugin 'tpope/vim-obsession'
 
 call vundle#end()            
 filetype plugin indent on    
