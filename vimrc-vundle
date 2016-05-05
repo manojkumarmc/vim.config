@@ -22,7 +22,7 @@ Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-obsession'
 
 call vundle#end()            
-filetype plugin indent on    
+    
 
 function OpenNERDTree()
     execute ":NERDTree"
@@ -72,5 +72,10 @@ set smartindent
 set tabstop=2 
 set shiftwidth=2
 set expandtab
+colorscheme darkblue  
+set guifont=Consolas:h12:cANSI
+filetype on
+syntax on
+set relativenumber
 
 noremap <F3> :Autoformat<CR><CR>
