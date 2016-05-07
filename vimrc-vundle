@@ -77,5 +77,6 @@ set guifont=Consolas:h12:cANSI
 filetype on
 syntax on
 set relativenumber
+set wildmenu
 
 noremap <F3> :Autoformat<CR><CR>
