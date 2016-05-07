@@ -1,0 +1,172 @@
+Vim Tutorial
+============
+
+h j k l -> Primary motion keys
+
+h = left
+j = down
+k = up
+l = right
+
+Screen motion keys
+=====================
+
+n%	Go to a percent of the file content
+C-f 	Jump one page down
+C-b 	Jump one page up
+C-u 	Jump half page up
+C-d 	Jump half page down
+H 	Top of the screen
+M 	Middle of the screen
+L 	End of the screen
+; 	repeat any motion
+l; 	repeat motion in reverse direction
+0 	begining of line
+$ 	end of line
+
+f[char]	forward to a char
+F[char] backward to a char
+
+gg	begining of file
+G	end of file
+50G	goto the 50th line
+
+(	beginning of prev sentence
+)	beginning of next sentence
+
+{	beginning of perv paragraph
+}	beginning of next paragraph
+
+[[	beginning of curly brace
+]]	end of all curly braces
+][	next curly brace block
+[]	previous curly brace block
+
+%	between any blocks, be it of {} or [] or ()
+
+Search in file
+=====================
+*	immediate word search forward
+#	immediate word search backward
+n	next search forward
+N	next search backward
+g*	partial search immediately forward
+g#	partial search immediately backward
+/	manual search forward
+?	manual search backward
+
+Setting marks
+=====================
+Marks are bookmark which are invisible...!
+
+:marks	to display all marks
+m[char] to set a mark
+'[char]	to go to mark
+
+Combining command + motion / text object
+==========================================
+Command
+	d	delete
+	c	change
+	y	yank
+	v	visually select
+
+Motion
+	a	all
+	i	in
+	t	till
+	f	forward
+	F	backward
+
+Text Object
+	e	word
+	s	sentence
+	p	paragraph
+	t	tags
+
+Eg : 	diw	delete in word
+	caw	change in word
+	das	delete all sentence
+
+All of these can be repeated using the '.' command
+
+Macros
+===========
+This can be used to record some actions and repeat in n times
+
+q[char]		to start recording
+q		press again to stop recording
+@[char]		to play the macro
+
+Editing
+===========
+i	Insert at current pos
+I	Insert at the begining of line
+a	Insert after the cursor
+A	Insert at the end of the line
+o	Insert at the next line
+k	Insert above the current line
+O	Insert after pusing the current like down
+x	Delete current char
+X       Delete previous char
+dd	Delete current line
+.	repeat 
+dw	Delete current word with space
+de	Delete current word without space
+cw	Change current word
+r	Replace current char
+R	Replace all chars
+
+Virtual Editing
+================
+yy	Copy/Yank line
+S + y	Pasting after this will paste on the next line
+p	Paste one line down
+S + p	Paste one line above
+J	Join previous line with space
+S + J	Join previous line without space
+gv	Repeat the same mark
+
+Buffer management
+=====================
+This will help to open multiple files and manage it on the screen
+
+:ls	To list all buffers
+:b num	To open to the buffer with number num
+:b#	Go to the previuos buffer
+:bn	Go to the next buffer
+:bp	Go to the prev buffer
+:bd	Delete the buffer
+
+Window management
+=====================
+Ctrl W	v	Vertical Split
+	s	Horizontal Split
+	h	Move Left
+	j	Move Down
+	k	Move Up
+	l	Move Right
+	o	Maximise and kill all the other windows
+	H	Move window position Left
+	J	Move window position Down 
+	K	Move window position Up 
+	L	Move window position Right	
+:vsp		Vertical Split
+:sp		Horizontal Split
+
+Help System
+===========
+:help		Help shortcut
+:h		Help shortcut
+:F1		Help shortcut
+Ctrl ]		Enable hyperlink
+Ctrl T		Go Back
+Ctrl o		Go Back Furthur
+wildmenu	This will enable the wildmenu which is a help invocation on tab
+set wildmenu	Enable wildmenu
+set nowildmenu	Disable wildmenu
+:helpgrep	Grep on help
+:helpg		Grep on help
+:cwin		Grep Result Window
+:cclose		To close Grep Result Window
+
