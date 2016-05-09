@@ -7,7 +7,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 
-Plugin 'Valloric/YouCompleteMe' " please make sure that you have python-dev and ruby-dev installed :)
+"Plugin 'Valloric/YouCompleteMe' " please make sure that you have python-dev and ruby-dev installed :)
 Plugin 'mileszs/ack.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/vim-easymotion'
@@ -15,11 +15,12 @@ Plugin 'sjl/gundo.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdtree'
 Plugin 'SirVer/ultisnips'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'einars/js-beautify'
 Plugin 'ervandew/supertab'
-Plugin 'tpope/vim-obsession'
+"Plugin 'tpope/vim-obsession'
 
 call vundle#end()            
     
@@ -78,5 +79,5 @@ filetype on
 syntax on
 set relativenumber
 set wildmenu
-
+set paste
 noremap <F3> :Autoformat<CR><CR>
