@@ -1,11 +1,9 @@
 set nocompatible
-filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-
 
 "Plugin 'Valloric/YouCompleteMe' " please make sure that you have python-dev and ruby-dev installed :)
 Plugin 'mileszs/ack.vim'
@@ -83,5 +81,6 @@ set wildmenu
 set paste
 set laststatus=2 " To show the airline always
 set encoding=uft-8
+let g:pymode_options_colorcolumn = 0 
 
 noremap <F3> :Autoformat<CR><CR>
