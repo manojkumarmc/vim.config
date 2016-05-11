@@ -6,6 +6,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 "Plugin 'Valloric/YouCompleteMe' " please make sure that you have python-dev and ruby-dev installed :)
+
 Plugin 'mileszs/ack.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/vim-easymotion'
@@ -20,6 +21,8 @@ Plugin 'einars/js-beautify'
 Plugin 'ervandew/supertab'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'flazz/vim-colorschemes'
+
 "Plugin 'tpope/vim-obsession'
 
 call vundle#end()            
