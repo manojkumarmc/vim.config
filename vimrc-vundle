@@ -77,7 +77,7 @@ set shiftwidth=2
 set expandtab
 colorscheme darkblue  
 set guifont=Consolas:h12:cANSI
-filetype on
+filetype plugin on
 syntax on
 set relativenumber
 set wildmenu
