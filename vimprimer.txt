@@ -21,8 +21,10 @@ M 	Middle of the screen
 L 	End of the screen
 ; 	repeat any motion
 l; 	repeat motion in reverse direction
+
 0 	begining of line
 $ 	end of line
+gm	middle of line
 
 f[char]	forward to a char
 F[char] backward to a char
