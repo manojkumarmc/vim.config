@@ -1,9 +1,17 @@
+" vi/vim issues resolved
 set nocompatible
 
+" setting terminal color settings
+set t_Co=256 
+set term=gnome-256color
+
+
+" Updating vim 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
+
 
 "Plugin 'Valloric/YouCompleteMe' " please make sure that you have python-dev and ruby-dev installed :)
 
@@ -21,28 +29,22 @@ Plugin 'einars/js-beautify'
 Plugin 'ervandew/supertab'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'klen/python-mode'
 Plugin 'flazz/vim-colorschemes'
 
 "Plugin 'tpope/vim-obsession'
 
 call vundle#end()            
     
-
+"Nerdtree toggling enabled
 function OpenNERDTree()
     execute ":NERDTree"
 endfunction
       
 command -nargs=0 OpenNERDTree :call OpenNERDTree()
-
-" Save session on quitting Vim
-autocmd VimLeave * NERDTreeClose
-autocmd VimLeave * mksession! Session.vim
-"
-" " Restore session on starting Vim
-"autocmd VimEnter * call MySessionRestoreFunction()
-autocmd VimEnter * NERDTree
-
 nmap <ESC>t :NERDTreeToggle<CR>
+
+"Delete all buffers
 nmap <ESC>a :qa<CR>
 
 let g:EasyMotion_leader_key = ','
@@ -57,13 +59,16 @@ let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
 let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
 let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
 
+"Gundo toggling enabled
 nnoremap <F5> :GundoToggle<CR>
 
+"Ultisnips functionality tuning
 let g:UltiSnipsExpandTrigger='<F4>'
 let g:UltiSnipsListSnippets='<c-tab>'
 let g:UltiSnipsJumpForwardTrigger='<c-j>'
 let g:UltiSnipsJumpBackwardTrigger='<c-k>'
 
+"Autocmd to beautify functions
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
@@ -75,15 +80,18 @@ set smartindent
 set tabstop=2 
 set shiftwidth=2
 set expandtab
-colorscheme darkblue  
+colorscheme molokai 
 set guifont=Consolas:h12:cANSI
 filetype plugin on
 syntax on
 set relativenumber
 set wildmenu
 set paste
-set laststatus=2 " To show the airline always
-set encoding=uft-8
-let g:pymode_options_colorcolumn = 0 
+set laststatus=2 " vim-airline was not coming default
+let g:pymode_options_colorcolumn = 0 "red bar in pymode
+set noswapfile
+
+set listchars=eol:↲,tab:>·,trail:.,extends:>,precedes:<,space:. "Enable the space utilization
+set list "Turn the space utilization on
 
 noremap <F3> :Autoformat<CR><CR>
