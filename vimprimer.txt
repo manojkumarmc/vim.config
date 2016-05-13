@@ -124,8 +124,10 @@ S + y	Pasting after this will paste on the next line
 p	Paste one line down
 S + p	Paste one line above
 J	Join previous line with space
-S + J	Join previous line without space
+gJ	Join previous line without space
 gv	Repeat the same mark
+"*y	Yank to clipboard
+"*p	Paste from clipboard
 
 Buffer management
 =====================
@@ -170,3 +172,31 @@ set nowildmenu	Disable wildmenu
 :cwin		Grep Result Window
 :cclose		To close Grep Result Window
 
+History Listing
+=====================
+q:		This will give a list of history commands and you can execute by pressing <enter> key
+
+Tab management
+=====================
+:tabnew <newfile>	opens the file in a new tab
+gt			go to the next tab
+gT			go to the prev tab
+:tabs			List all the tabs
+
+Spell check
+=====================
+:setlocal spell spelllang=en_us
+z=	spellsuggest will popup
+
+Code Folding
+=====================
+zo	open fold
+zc	close fold
+za	toggle between fold and unfold
+zM	close all folds
+zO	open all folds
+
+Python mode
+=====================
+K		documentation
+Ctrl C g	go to definition	
