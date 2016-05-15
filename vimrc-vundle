@@ -104,6 +104,7 @@ set noswapfile
 set complete=.,w,b,t 
 
 "Enable the space utilization
+set listchars=eol:↲,tab:>·,trail:.,extends:>,precedes:<,space:.
 
 "Turn the space utilization on
 set list 
