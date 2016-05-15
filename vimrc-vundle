@@ -1,6 +1,9 @@
 " vi/vim issues resolved
 set nocompatible
 
+" utf-8 encoding display
+set encoding=utf-8
+
 " setting terminal color settings
 set t_Co=256 
 set term=gnome-256color
@@ -87,11 +90,23 @@ syntax on
 set relativenumber
 set wildmenu
 set paste
-set laststatus=2 " vim-airline was not coming default
-let g:pymode_options_colorcolumn = 0 "red bar in pymode
-set noswapfile
 
-set listchars=eol:â†²,tab:>Â·,trail:.,extends:>,precedes:<,space:. "Enable the space utilization
-set list "Turn the space utilization on
+" vim-airline was not coming default
+set laststatus=2 
+
+"red bar in pymode
+let g:pymode_options_colorcolumn = 0 
+
+" No swapfile
+set noswapfile
+ 
+" How to enable the word completion
+set complete=.,w,b,t 
+
+"Enable the space utilization
+set listchars=eol:¿,tab:>·,trail:.,extends:>,precedes:<,space:.
+
+"Turn the space utilization on
+set list 
 
 noremap <F3> :Autoformat<CR><CR>

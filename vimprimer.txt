@@ -141,6 +141,18 @@ iB
 at	tagwise
 it	
 
+Insert Mode
+=====================
+Ctrl N		Autocomplete with next available words
+Ctrl P  	Autocomplete with previous words
+Ctrl T		Tag
+Ctrl D		Tag backward	
+Ctrl x + l	Search line
+Ctrl x + f	Search file system
+
+
+
+
 Virtual Editing
 ================
 yy	Copy/Yank line
