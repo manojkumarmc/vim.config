@@ -118,6 +118,28 @@ de	Delete current word without space
 cw	Change current word
 r	Replace current char
 R	Replace all chars
+ciw	change within the word
+Shift c	change from current position, deletes the rest 
+
+Visual Mode
+=====================
+v	Go to visual mode
+Ctrl v	Visual block mode
+Shft v	Visual line mode
+
+iw	select the current word in visual mode
+aw	select a word
+aW	select a word with whitespace 
+as	select a sentence
+is	select inner sentence
+ap
+
+ab	blockwise
+aB
+iB
+
+at	tagwise
+it	
 
 Virtual Editing
 ================
