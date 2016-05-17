@@ -38,6 +38,9 @@ Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'drmingdrmer/xptemplate'
+Plugin 'tpope/vim-surround'
+Plugin 'glts/vim-cottidie'
+
 
 "Plugin 'tpope/vim-obsession'
 
