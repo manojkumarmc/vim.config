@@ -40,7 +40,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'drmingdrmer/xptemplate'
 Plugin 'tpope/vim-surround'
 Plugin 'glts/vim-cottidie'
-
+Plugin 'tomtom/tcomment_vim'
 
 "Plugin 'tpope/vim-obsession'
 
