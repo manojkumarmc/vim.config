@@ -1,0 +1,4 @@
+git checkout https://github.com/vim/vim.git
+cd git
+./configure --enable-pythoninterp --prefix=/usr/local
+make && make install
