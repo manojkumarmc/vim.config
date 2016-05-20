@@ -8,6 +8,8 @@ set encoding=utf-8
 set t_Co=256 
 set term=gnome-256color
 
+"this is needed to make sure that ultisnips works finally...!
+filetype off 
 
 " Updating vim 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -24,7 +26,6 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'sjl/gundo.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdtree'
-Plugin 'SirVer/ultisnips'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'maksimr/vim-jsbeautify'
@@ -37,14 +38,18 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'drmingdrmer/xptemplate'
 Plugin 'tpope/vim-surround'
 Plugin 'glts/vim-cottidie'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'honza/vim-snippets' 
+Plugin 'SirVer/ultisnips'
 
 "Plugin 'tpope/vim-obsession'
 
-call vundle#end()            
+call vundle#end()      
+
+" Needed to get ultisnips working
+filetype indent plugin on  
     
 "Nerdtree toggling enabled
 function OpenNERDTree()
@@ -86,7 +91,7 @@ let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc
 nnoremap <F5> :GundoToggle<CR>
 
 " Ultisnips functionality tuning
-let g:UltiSnipsExpandTrigger='<F4>'
+let g:UltiSnipsExpandTrigger='<c-a>'
 let g:UltiSnipsListSnippets='<c-tab>'
 let g:UltiSnipsJumpForwardTrigger='<c-j>'
 let g:UltiSnipsJumpBackwardTrigger='<c-k>'
@@ -95,8 +100,6 @@ let g:UltiSnipsJumpBackwardTrigger='<c-k>'
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
-
-vmap <Tab> %
 
 set smartindent 
 set tabstop=2 
