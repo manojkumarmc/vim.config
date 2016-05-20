@@ -111,7 +111,6 @@ filetype plugin on
 syntax on
 set relativenumber
 set wildmenu
-set paste
 
 " vim-airline was not coming default
 set laststatus=2 
