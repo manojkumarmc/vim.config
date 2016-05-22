@@ -243,10 +243,14 @@ Operations
     -------------------------------
     1. select text
     2. press ~ or g~ or g~~
+    
   - Sorting line
     -------------------------------
     1. Add 1. to each line by %/^/1./g
     2. Select lines in visual mode
     3. g Ctrl-a should do the trick
-
+    
+  - Buffer to the current working directory
+    ---------------------------------------
+    :lcd %:h
 
