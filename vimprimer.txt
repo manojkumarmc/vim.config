@@ -143,10 +143,10 @@ it
 
 Insert Mode
 =====================
-Ctrl N		Autocomplete with next available words
-Ctrl P  	Autocomplete with previous words
-Ctrl T		Tag
-Ctrl D		Tag backward	
+Ctrl n		Autocomplete with next available words
+Ctrl p  	Autocomplete with previous words
+Ctrl t		Tab
+Ctrl d		Tab backward	
 Ctrl x + l	Search line
 Ctrl x + f	Search file system
 
