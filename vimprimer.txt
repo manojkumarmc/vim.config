@@ -253,4 +253,8 @@ Operations
   - Buffer to the current working directory
     ---------------------------------------
     :lcd %:h
+  
+  - Delete all in a file on the basis of filter
+    -------------------------------------------
+    v/[your_text]/d
 
