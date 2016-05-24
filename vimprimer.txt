@@ -257,4 +257,8 @@ Operations
   - Delete all in a file on the basis of filter
     -------------------------------------------
     v/[your_text]/d
+    
+  - Change working directory to the file on buffer
+    ----------------------------------------------
+    lcd %:p:h
 
