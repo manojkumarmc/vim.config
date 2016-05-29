@@ -92,9 +92,9 @@ nnoremap <F5> :GundoToggle<CR>
 
 " Ultisnips functionality tuning
 let g:UltiSnipsExpandTrigger='<c-a>'
-let g:UltiSnipsListSnippets='<c-tab>'
-let g:UltiSnipsJumpForwardTrigger='<c-j>'
-let g:UltiSnipsJumpBackwardTrigger='<c-k>'
+let g:UltiSnipsListSnippets='<c-j>'
+let g:UltiSnipsJumpForwardTrigger='<c-l>'
+let g:UltiSnipsJumpBackwardTrigger='<c-h>'
 
 " Autocmd to beautify functions
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
