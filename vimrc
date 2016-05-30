@@ -101,12 +101,23 @@ autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
+" The width of tab is set to 4
 set smartindent 
-set tabstop=2 
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set expandtab
+
+" Fold settings | deepest 10 folds | dont fold by default | :h folding
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=1 
+
+" Pray that it exist
 colorscheme molokai 
 set guifont=Consolas:h12:cANSI
+
 filetype plugin on
 syntax on
 set relativenumber
