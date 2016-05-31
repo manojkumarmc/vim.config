@@ -43,6 +43,7 @@ Plugin 'glts/vim-cottidie'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'honza/vim-snippets' 
 Plugin 'SirVer/ultisnips'
+Plugin 'tmhedberg/SimpylFold'
 
 "Plugin 'tpope/vim-obsession'
 
