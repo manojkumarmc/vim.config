@@ -142,3 +142,7 @@ set listchars=eol:↲,tab:>·,trail:.,extends:>,precedes:<,space:.
 set list 
 
 noremap <F3> :Autoformat<CR><CR>
+
+"##################################
+" touch ~/.ctags
+" echo --python-kinds=-i >> ~/.ctags
