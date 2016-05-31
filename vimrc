@@ -132,6 +132,9 @@ let g:pymode_options_colorcolumn = 0
 
 " No swapfile
 set noswapfile
+
+" God save me
+set nobackup
  
 " How to enable the word completion
 set complete=.,w,b,t 
