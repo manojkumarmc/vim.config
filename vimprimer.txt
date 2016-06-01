@@ -33,6 +33,11 @@ gg	begining of file
 G	end of file
 50G	goto the 50th line
 
+Hzz	shift the top of the screen to the middle of the screen
+Lzz	bottom of the screen to the middle of the screen
+zt	shift the current line to the top of the screen
+zb	shift the current line to the bottom of the screen
+
 (	beginning of prev sentence
 )	beginning of next sentence
 
