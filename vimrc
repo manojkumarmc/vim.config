@@ -44,6 +44,7 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'honza/vim-snippets' 
 Plugin 'SirVer/ultisnips'
 Plugin 'tmhedberg/SimpylFold'
+Plugin 'terryma/vim-smooth-scroll'
 
 "Plugin 'tpope/vim-obsession'
 
@@ -101,6 +102,12 @@ let g:UltiSnipsJumpBackwardTrigger='<c-h>'
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
+" For the smooth scroll
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 " The width of tab is set to 2
 set smartindent 
