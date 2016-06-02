@@ -5,8 +5,9 @@ set nocompatible
 set encoding=utf-8
 
 " setting terminal color settings
-set t_Co=256 
-set term=gnome-256color
+if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
+  set t_Co=256
+endif
 
 "this is needed to make sure that ultisnips works finally...!
 filetype off 
@@ -45,6 +46,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'SirVer/ultisnips'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'terryma/vim-smooth-scroll'
+Plugin 'rking/ag.vim' " need to install the_silver_searcher
 
 "Plugin 'tpope/vim-obsession'
 
