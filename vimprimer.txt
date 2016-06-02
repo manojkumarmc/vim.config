@@ -24,6 +24,8 @@ l; 	repeat motion in reverse direction
 
 0 	begining of line
 $ 	end of line
+^	to the first char in line
+g_	to the last char of the line
 gm	middle of line
 
 f[char]	forward to a char
@@ -95,7 +97,13 @@ Text Object
 
 Eg : 	diw	delete in word
 	caw	change in word
+	ci"	change all inner the quotes
+	ci[
+	ci(
+	cit	change in tag
+	cip 	change in paragraph
 	das	delete all sentence
+	c/<word> change after searching the word
 
 All of these can be repeated using the '.' command
 
