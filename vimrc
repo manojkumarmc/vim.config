@@ -137,7 +137,10 @@ set wildmenu
 set laststatus=2 
 
 " Remove red bar in pymode
-let g:pymode_options_colorcolumn = 0 
+let g:pymode_options_colorcolumn = 0
+
+" No auto document display in python mode
+set completeopt=menu
 
 " No swapfile
 set noswapfile
