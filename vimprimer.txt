@@ -179,6 +179,9 @@ gJ	Join previous line without space
 gv	Repeat the same mark
 "*y	Yank to clipboard
 "*p	Paste from clipboard
+y$	Yank till end of line from current position
+y^	Yank till the begining of the line
+
 
 Buffer management
 =====================
