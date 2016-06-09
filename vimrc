@@ -63,6 +63,9 @@ endfunction
 command -nargs=0 OpenNERDTree :call OpenNERDTree()
 nmap <ESC>t :NERDTreeToggle<CR>
 
+" Ignore file types of .vim ~ .git and .pyc
+let NERDTreeIgnore=['\.vim$', '\~$', '\.git$', '\.pyc']
+
 " Delete all buffers
 nmap <ESC>a :qa<CR>
 
