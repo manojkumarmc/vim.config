@@ -47,6 +47,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'terryma/vim-smooth-scroll'
 Plugin 'rking/ag.vim' " need to install the_silver_searcher
+Plugin 'tpope/vim-repeat'
 
 "Plugin 'tpope/vim-obsession'
 
