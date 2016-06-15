@@ -279,4 +279,10 @@ Operations
   - Change working directory to the file on buffer
     ----------------------------------------------
     lcd %:p:h
+  
+  - Vim surround magic
+    ys2w " - surround 2 words with quote
+    ys$ "  - surroung till end of line with "
+    ysiw)  - surround inner word with brackets without space
+    
 
