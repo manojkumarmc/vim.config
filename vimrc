@@ -159,7 +159,10 @@ set complete=.,w,b,t
 set listchars=eol:↲,tab:>·,trail:.,extends:>,precedes:<,space:.
 
 " Turn the space utilization on
-set list 
+set nolist 
+
+" Have a helpful line
+set cursorline
 
 noremap <F3> :Autoformat<CR><CR>
 
