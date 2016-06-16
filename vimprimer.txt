@@ -11,20 +11,20 @@ l = right
 Screen motion keys
 =====================
 
-n%	Go to a percent of the file content
+n%    Go to a percent of the file content
 C-f 	Jump one page down
 C-b 	Jump one page up
 C-u 	Jump half page up
 C-d 	Jump half page down
-H 	Top of the screen
-M 	Middle of the screen
-L 	End of the screen
-; 	repeat any motion
-l; 	repeat motion in reverse direction
+H     Top of the screen
+M     Middle of the screen
+L     End of the screen
+;     repeat any motion
+l;    repeat motion in reverse direction
 
 0 	begining of line
 $ 	end of line
-^	to the first char in line
+^   to the first char in line
 g_	to the last char of the line
 gm	middle of line
 
@@ -32,13 +32,13 @@ f[char]	forward to a char
 F[char] backward to a char
 
 gg	begining of file
-G	end of file
+G   end of file
 50G	goto the 50th line
 
-Hzz	shift the top of the screen to the middle of the screen
-Lzz	bottom of the screen to the middle of the screen
-zt	shift the current line to the top of the screen
-zb	shift the current line to the bottom of the screen
+Hzz     shift the top of the screen to the middle of the screen
+Lzz     bottom of the screen to the middle of the screen
+zt      shift the current line to the top of the screen
+zb      shift the current line to the bottom of the screen
 Ctrl-e  scroll screen up
 Ctrl-y  scroll screen down
 
@@ -57,10 +57,10 @@ Ctrl-y  scroll screen down
 
 Search in file
 =====================
-*	immediate word search forward
-#	immediate word search backward
-n	next search forward
-N	next search backward
+*   immediate word search forward
+#   immediate word search backward
+n   next search forward
+N   next search backward
 g*	partial search immediately forward
 g#	partial search immediately backward
 /	manual search forward
@@ -95,14 +95,16 @@ Text Object
 	p	paragraph
 	t	tags
 
-Eg : 	diw	delete in word
-	caw	change in word
-	ci"	change all inner the quotes
+Eg : 	
+  diw   delete in word
+	caw   change in word
+	ci"   change all inner the quotes
 	ci[
 	ci(
-	cit	change in tag
+	cit   change in tag
 	cip 	change in paragraph
-	das	delete all sentence
+	das   delete all sentence
+
 	c/<word> change after searching the word
 
 All of these can be repeated using the '.' command
@@ -112,29 +114,28 @@ Macros
 This can be used to record some actions and repeat in n times
 
 q[char]		to start recording
-q		press again to stop recording
+q         press again to stop recording
 @[char]		to play the macro
 
 Editing
 ===========
-i	Insert at current pos
-I	Insert at the begining of line
-a	Insert after the cursor
-A	Insert at the end of the line
-o	Insert at the next line
-k	Insert above the current line
-O	Insert after pusing the current like down
-x	Delete current char
-X       Delete previous char
-dd	Delete current line
-.	repeat 
-dw	Delete current word with space
-de	Delete current word without space
-cw	Change current word
-r	Replace current char
-R	Replace all chars
-ciw	change within the word
-Shift c	change from current position, deletes the rest 
+i     Insert at current pos
+I     Insert at the begining of line
+a     Insert after the cursor
+A     Insert at the end of the line
+o     Insert at the next line
+k     Insert above the current line
+O     Insert after pusing the current like down
+x     Delete current char
+X     Delete previous char
+dd	  Delete current line
+.   	repeat 
+dw    Delete current word with space
+de    Delete current word without space
+cw    Change current word
+r     Replace current char
+R     Replace all chars
+S-c   change from current position, deletes the rest 
 
 Visual Mode
 =====================
@@ -158,73 +159,71 @@ it
 
 Insert Mode
 =====================
-Ctrl n		Autocomplete with next available words
-Ctrl p  	Autocomplete with previous words
-Ctrl t		Tab
-Ctrl d		Tab backward	
+Ctrl n      Autocomplete with next available words
+Ctrl p      Autocomplete with previous words
+Ctrl t      Tab
+Ctrl d      Tab backward	
 Ctrl x + l	Search line
 Ctrl x + f	Search file system
 
 
-
-
 Virtual Editing
 ================
-yy	Copy/Yank line
+yy    Copy/Yank line
 S + y	Pasting after this will paste on the next line
-p	Paste one line down
+p     Paste one line down
 S + p	Paste one line above
-J	Join previous line with space
-gJ	Join previous line without space
-gv	Repeat the same mark
-"*y	Yank to clipboard
-"*p	Paste from clipboard
-y$	Yank till end of line from current position
-y^	Yank till the begining of the line
+J     Join previous line with space
+gJ    Join previous line without space
+gv    Repeat the same mark
+"*y   Yank to clipboard
+"*p   Paste from clipboard
+y$    Yank till end of line from current position
+y^    Yank till the begining of the line
 
 
 Buffer management
 =====================
 This will help to open multiple files and manage it on the screen
 
-:ls	To list all buffers
+:ls     To list all buffers
 :b num	To open to the buffer with number num
-:b#	Go to the previuos buffer
-:bn	Go to the next buffer
-:bp	Go to the prev buffer
-:bd	Delete the buffer
+:b#     Go to the previuos buffer
+:bn     Go to the next buffer
+:bp     Go to the prev buffer
+:bd     Delete the buffer
 
 Window management
 =====================
 Ctrl W	v	Vertical Split
-	s	Horizontal Split
-	h	Move Left
-	j	Move Down
-	k	Move Up
-	l	Move Right
-	o	Maximise and kill all the other windows
-	H	Move window position Left
-	J	Move window position Down 
-	K	Move window position Up 
-	L	Move window position Right	
-:vsp		Vertical Split
-:sp		Horizontal Split
+s         Horizontal Split
+h         Move Left
+j         Move Down
+k         Move Up
+l         Move Right
+o         Maximise and kill all the other windows
+H         Move window position Left
+J         Move window position Down 
+K         Move window position Up 
+L         Move window position Right	
+:vsp      Vertical Split
+:sp       Horizontal Split
 
 Help System
 ===========
-:help		Help shortcut
-:h		Help shortcut
-:F1		Help shortcut
+:help     Help shortcut
+:h        Help shortcut
+:F1       Help shortcut
 Ctrl ]		Enable hyperlink
 Ctrl T		Go Back
 Ctrl o		Go Back Furthur
-wildmenu	This will enable the wildmenu which is a help invocation on tab
-set wildmenu	Enable wildmenu
+wildmenu        This will enable the wildmenu which is a help invocation on tab
+set wildmenu    Enable wildmenu
 set nowildmenu	Disable wildmenu
-:helpgrep	Grep on help
-:helpg		Grep on help
-:cwin		Grep Result Window
-:cclose		To close Grep Result Window
+:helpgrep       Grep on help
+:helpg          Grep on help
+:cwin           Grep Result Window
+:cclose         To close Grep Result Window
 
 History Listing
 =====================
