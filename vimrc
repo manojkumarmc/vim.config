@@ -161,6 +161,9 @@ set listchars=eol:↲,tab:>·,trail:.,extends:>,precedes:<,space:.
 " Turn the space utilization on
 set nolist 
 
+" No hilighting on cursorline
+hi CursorLine NONE gui=underline term=underline cterm=underline 
+
 " Have a helpful line
 set cursorline
 
