@@ -146,6 +146,9 @@ let g:pymode_options_colorcolumn = 0
 " No auto document display in python mode
 set completeopt=menu
 
+" Enable debugging
+let g:pymode_breakpoint = 1
+
 " No swapfile
 set noswapfile
 
