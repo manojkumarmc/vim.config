@@ -292,6 +292,8 @@ Read from OS
       eg : .! figlet 
          : .! cowsay
          : .! pastebinit
+    :h :read!
+    :h filter
 
     
 
