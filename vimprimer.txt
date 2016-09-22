@@ -283,5 +283,15 @@ Operations
     ys2w " - surround 2 words with quote
     ys$ "  - surroung till end of line with "
     ysiw)  - surround inner word with brackets without space
+
+Read from OS
+============
+    :r !{file} - reads the file from the os to the buffer
+    :r !{cmd}  - reads the command to the current buffer
+    :. !{cmd}  - reads the current line send to the external program and replaces the line with the output
+      eg : .! figlet 
+         : .! cowsay
+         : .! pastebinit
+
     
 
