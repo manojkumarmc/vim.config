@@ -240,6 +240,9 @@ Spell check
 =====================
 :setlocal spell spelllang=en_us
 z=	spellsuggest will popup
+zg      add word to spell list
+zw      mark word as incorrect
+^x^S    spell check enabler
 
 Code Folding
 =====================
