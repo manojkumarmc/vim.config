@@ -51,6 +51,13 @@ Plugin 'tpope/vim-repeat'
 
 "Plugin 'tpope/vim-obsession'
 
+" Typescript plugins
+Plugin 'leafgarland/typescript-vim'
+Plugin 'Quramy/tsuquyomi'
+Plugin 'Shougo/vimproc.vim' "this needs to be built from source
+" Plugin 'magarcia/vim-angular2-snippets'
+
+
 call vundle#end()      
 
 " Needed to get ultisnips working
