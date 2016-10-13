@@ -21,33 +21,54 @@ Plugin 'gmarik/Vundle.vim'
 
 "Plugin 'Valloric/YouCompleteMe' " please make sure that you have python-dev and ruby-dev installed :)
 
-Plugin 'mileszs/ack.vim'
+" The ultimate searcher
 Plugin 'kien/ctrlp.vim'
+
+" The in file searcher
 Plugin 'Lokaltog/vim-easymotion'
+
+" Manage your undos
 Plugin 'sjl/gundo.vim'
+
+" Multiple editing which gives sublime a run for its money
 Plugin 'terryma/vim-multiple-cursors'
+
+" The explorer
 Plugin 'scrooloose/nerdtree'
+
+" Themes
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'maksimr/vim-jsbeautify'
-Plugin 'einars/js-beautify'
-Plugin 'ervandew/supertab'
 Plugin 'edkolev/tmuxline.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'klen/python-mode'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'majutsushi/tagbar'
-Plugin 'scrooloose/syntastic'
+
+" JS beautifiers
+Plugin 'maksimr/vim-jsbeautify'
+Plugin 'einars/js-beautify'
+
+" Tabss
+Plugin 'ervandew/supertab'
+
+" Git in hand
+Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
+
+" Python charmer
+Plugin 'klen/python-mode'
+
+" Multiple language mgmt
+Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
-Plugin 'glts/vim-cottidie'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'honza/vim-snippets' 
 Plugin 'SirVer/ultisnips'
+
+" vim behaviour
+Plugin 'tpope/vim-repeat'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'terryma/vim-smooth-scroll'
 Plugin 'rking/ag.vim' " need to install the_silver_searcher
-Plugin 'tpope/vim-repeat'
 
 "Plugin 'tpope/vim-obsession'
 
@@ -57,6 +78,8 @@ Plugin 'Shougo/vimproc.vim' " this needs to be built from source
 Plugin 'Quramy/tsuquyomi'
 Plugin 'leafgarland/typescript-vim'
 
+"Fun
+Plugin 'glts/vim-cottidie'
 
 call vundle#end()      
 
@@ -188,9 +211,8 @@ let g:typescript_compiler_options = ''
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
 
-" autocmd FileType typescript html
-" autocmd FileType typescript syn clear foldBraces
-
+"" May be for some later use..let us see..
+"=========================================
 " set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
 " set statusline+=%*
