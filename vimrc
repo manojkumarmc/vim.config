@@ -52,10 +52,10 @@ Plugin 'tpope/vim-repeat'
 "Plugin 'tpope/vim-obsession'
 
 " Typescript plugins
-Plugin 'leafgarland/typescript-vim'
-Plugin 'Quramy/tsuquyomi'
-Plugin 'Shougo/vimproc.vim' "this needs to be built from source
+Plugin 'Shougo/vimproc.vim' " this needs to be built from source
 " Plugin 'magarcia/vim-angular2-snippets'
+Plugin 'Quramy/tsuquyomi'
+Plugin 'leafgarland/typescript-vim'
 
 
 call vundle#end()      
@@ -182,3 +182,20 @@ noremap <F3> :Autoformat<CR><CR>
 "##################################
 " touch ~/.ctags
 " echo --python-kinds=-i >> ~/.ctags
+
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = ''
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
+
+" autocmd FileType typescript html
+" autocmd FileType typescript syn clear foldBraces
+
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+" let g:tsuquyomi_disable_quickfix = 1
+" let g:syntastic_typescript_checkers = ['tsuquyomi'] 
+
