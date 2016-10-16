@@ -73,6 +73,7 @@ Plugin 'rking/ag.vim' " need to install the_silver_searcher
 "Plugin 'tpope/vim-obsession'
 
 " Typescript plugins
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'Shougo/vimproc.vim' " this needs to be built from source
 " Plugin 'magarcia/vim-angular2-snippets'
 Plugin 'Quramy/tsuquyomi'
