@@ -212,6 +212,9 @@ let g:typescript_compiler_options = ''
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
 
+" Remove experimentalDecorators error
+let g:syntastic_typescript_tsc_args = "--experimentalDecorators"
+
 "" May be for some later use..let us see..
 "=========================================
 " set statusline+=%#warningmsg#
