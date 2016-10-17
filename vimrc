@@ -79,6 +79,9 @@ Plugin 'Shougo/vimproc.vim' " this needs to be built from source
 Plugin 'Quramy/tsuquyomi'
 Plugin 'leafgarland/typescript-vim'
 
+" Manage Dockerfile
+Plugin 'ekalinin/Dockerfile.vim'
+
 "Fun
 Plugin 'glts/vim-cottidie'
 
