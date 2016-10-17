@@ -82,6 +82,10 @@ Plugin 'leafgarland/typescript-vim'
 " Manage Dockerfile
 Plugin 'ekalinin/Dockerfile.vim'
 
+" Icons
+" Install the amazaing nerd fonts for this
+Plugin 'ryanoasis/vim-devicons'
+
 "Fun
 Plugin 'glts/vim-cottidie'
 
@@ -217,6 +221,9 @@ autocmd QuickFixCmdPost    l* nested lwindow
 
 " Remove experimentalDecorators error
 let g:syntastic_typescript_tsc_args = "--experimentalDecorators"
+
+" To sync the fonts with airline
+let g:airline_powerline_fonts=1
 
 "" May be for some later use..let us see..
 "=========================================
