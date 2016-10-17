@@ -63,8 +63,8 @@ n   next search forward
 N   next search backward
 g*	partial search immediately forward
 g#	partial search immediately backward
-/	manual search forward
-?	manual search backward
+/	  manual search forward
+?	  manual search backward
 
 Setting marks
 =====================
@@ -139,7 +139,7 @@ S-c   change from current position, deletes the rest
 
 Visual Mode
 =====================
-v	Go to visual mode
+v	      Go to visual mode
 Ctrl v	Visual block mode
 Shft v	Visual line mode
 
