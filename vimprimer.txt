@@ -208,15 +208,18 @@ K         Move window position Up
 L         Move window position Right	
 :vsp      Vertical Split
 :sp       Horizontal Split
+C-W [n] > Increase the width by n columns
+C-W [n] < Decrease the width by n columns
+C-W =     Make windows equal size
 
 Help System
 ===========
-:help     Help shortcut
-:h        Help shortcut
-:F1       Help shortcut
-Ctrl ]		Enable hyperlink
-Ctrl T		Go Back
-Ctrl o		Go Back Furthur
+:help           Help shortcut
+:h              Help shortcut
+:F1             Help shortcut
+Ctrl ]          Enable hyperlink
+Ctrl T          Go Back
+Ctrl o          Go Back Furthur
 wildmenu        This will enable the wildmenu which is a help invocation on tab
 set wildmenu    Enable wildmenu
 set nowildmenu	Disable wildmenu
@@ -232,14 +235,14 @@ q:		This will give a list of history commands and you can execute by pressing <e
 Tab management
 =====================
 :tabnew <newfile>	opens the file in a new tab
-gt			go to the next tab
-gT			go to the prev tab
+gt        go to the next tab
+gT        go to the prev tab
 :tabs			List all the tabs
 
 Spell check
 =====================
 :setlocal spell spelllang=en_us
-z=	spellsuggest will popup
+z=      spellsuggest will popup
 zg      add word to spell list
 zw      mark word as incorrect
 ^x^S    spell check enabler
