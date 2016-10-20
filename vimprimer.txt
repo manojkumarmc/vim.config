@@ -208,8 +208,11 @@ K         Move window position Up
 L         Move window position Right	
 :vsp      Vertical Split
 :sp       Horizontal Split
+
 C-W [n] > Increase the width by n columns
 C-W [n] < Decrease the width by n columns
+C-W [n] - Decrease the height by n columns
+C-W [n] + Increase the height by n columns
 C-W =     Make windows equal size
 
 Help System
