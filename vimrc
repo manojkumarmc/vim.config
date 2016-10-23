@@ -18,7 +18,6 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-
 "Plugin 'Valloric/YouCompleteMe' " please make sure that you have python-dev and ruby-dev installed :)
 
 " The ultimate searcher
@@ -63,6 +62,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'honza/vim-snippets'
 Plugin 'SirVer/ultisnips'
+Plugin 'rstacruz/sparkup' " html autogenerator
 
 " vim behaviour
 Plugin 'tpope/vim-repeat'
@@ -77,9 +77,10 @@ Plugin 'bronson/vim-trailing-whitespace' " whitespace cleaner
 " Typescript plugins
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'Shougo/vimproc.vim' " this needs to be built from source
-" Plugin 'magarcia/vim-angular2-snippets'
 Plugin 'Quramy/tsuquyomi'
 Plugin 'leafgarland/typescript-vim'
+
+" Plugin 'magarcia/vim-angular2-snippets' " syntax issues
 
 " Manage Dockerfile
 Plugin 'ekalinin/Dockerfile.vim'
