@@ -167,11 +167,10 @@ set nofoldenable
 set foldlevel=1 
 
 " Pray that it exist
-colorscheme xoria256 " even molokai 
+" colorscheme xoria256 " even molokai 
 
 " If Droid Sans Mono dont exist
 set guifont=Consolas:h12:cANSI
-set cursorline
 
 filetype plugin on
 syntax on
