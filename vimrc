@@ -69,6 +69,8 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'terryma/vim-smooth-scroll'
 Plugin 'rking/ag.vim' " need to install the_silver_searcher
+Plugin 'sickill/vim-pasta' " intendation manager
+Plugin 'bronson/vim-trailing-whitespace' " whitespace cleaner
 
 "Plugin 'tpope/vim-obsession'
 
