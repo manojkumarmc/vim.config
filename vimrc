@@ -10,9 +10,9 @@ if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gno
 endif
 
 "this is needed to make sure that ultisnips works finally...!
-filetype off 
+filetype off
 
-" Updating vim 
+" Updating vim
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -61,7 +61,7 @@ Plugin 'klen/python-mode'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'honza/vim-snippets' 
+Plugin 'honza/vim-snippets'
 Plugin 'SirVer/ultisnips'
 
 " vim behaviour
@@ -91,16 +91,16 @@ Plugin 'ryanoasis/vim-devicons'
 "Fun
 Plugin 'glts/vim-cottidie'
 
-call vundle#end()      
+call vundle#end()
 
 " Needed to get ultisnips working
-filetype indent plugin on  
-    
+filetype indent plugin on
+
 "Nerdtree toggling enabled
 function OpenNERDTree()
     execute ":NERDTree"
 endfunction
-      
+
 command -nargs=0 OpenNERDTree :call OpenNERDTree()
 nmap <ESC>t :NERDTreeToggle<CR>
 
@@ -156,7 +156,7 @@ noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 " The width of tab is set to 2
-set smartindent 
+set smartindent
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
@@ -166,10 +166,10 @@ set expandtab
 set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
-set foldlevel=1 
+set foldlevel=1
 
 " Pray that it exist
-" colorscheme xoria256 " even molokai 
+" colorscheme xoria256 " even molokai
 
 " If Droid Sans Mono dont exist
 set guifont=Consolas:h12:cANSI
@@ -180,7 +180,7 @@ set relativenumber
 set wildmenu
 
 " vim-airline was not coming default
-set laststatus=2 
+set laststatus=2
 
 " Remove red bar in pymode
 let g:pymode_options_colorcolumn = 0
@@ -196,18 +196,18 @@ set noswapfile
 
 " God save me
 set nobackup
- 
+
 " How to enable the word completion
-set complete=.,w,b,t 
+set complete=.,w,b,t
 
 " Enable the space utilization
 set listchars=eol:↲,tab:>·,trail:.,extends:>,precedes:<,space:.
 
 " Turn the space utilization on
-set nolist 
+set nolist
 
 " No hilighting on cursorline
-hi CursorLine NONE gui=underline term=underline cterm=underline 
+hi CursorLine NONE gui=underline term=underline cterm=underline
 
 " Have a helpful line
 set cursorline
@@ -237,5 +237,5 @@ let g:airline_powerline_fonts=1
 " let g:syntastic_check_on_open = 1
 " let g:syntastic_check_on_wq = 0
 " let g:tsuquyomi_disable_quickfix = 1
-" let g:syntastic_typescript_checkers = ['tsuquyomi'] 
+" let g:syntastic_typescript_checkers = ['tsuquyomi']
 
