@@ -180,6 +180,9 @@ syntax on
 set relativenumber
 set wildmenu
 
+"Let it be smooth
+set lazyredraw
+
 " vim-airline was not coming default
 set laststatus=2
 
