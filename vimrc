@@ -233,13 +233,7 @@ let g:syntastic_typescript_tsc_args = "--experimentalDecorators"
 " To sync the fonts with airline
 let g:airline_powerline_fonts=1
 
-"" May be for some later use..let us see..
-"=========================================
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
-" let g:tsuquyomi_disable_quickfix = 1
-" let g:syntastic_typescript_checkers = ['tsuquyomi']
+" vim hanging issue on python save - critical fix
+let g:pymode_rope = 0
+let g:pymode_rope_lookup_project = 0
 
