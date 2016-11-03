@@ -180,6 +180,8 @@ gv    Repeat the same mark
 "*p   Paste from clipboard
 y$    Yank till end of line from current position
 y^    Yank till the begining of the line
+C-a   Increment the underlying number
+C-x   Decrement the underlying number
 
 
 Buffer management
