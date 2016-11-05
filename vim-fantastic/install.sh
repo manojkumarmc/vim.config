@@ -1,6 +1,12 @@
 #! /bin/bash
 
-yum install -y git tmux
+yum install -y gcc ncurses ncurses-devel make libevent libevent-devel automake git
+
+git clone https://github.com/tmux/tmux.git
+cd tmux
+sh autogen.sh
+./configure && make
+make install
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git clone https://github.com/jimeh/tmux-themepack.git ~/.tmux-themepack
