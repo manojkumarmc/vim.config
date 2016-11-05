@@ -40,4 +40,5 @@ cd vim
             --enable-luainterp=yes \
             --enable-gui=gtk2 --enable-cscope --prefix=/usr
 make VIMRUNTIMEDIR=/usr/share/vim/vim80
+make install
 
