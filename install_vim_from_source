@@ -1,4 +1,4 @@
-yum install epel-release
+yum install -y gcc ncurses ncurses-devel make libevent libevent-devel automake git epel-release
 
 git clone http://luajit.org/git/luajit-2.0.git
 cd luajit-2.0
