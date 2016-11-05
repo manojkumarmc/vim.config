@@ -19,13 +19,16 @@ echo run '~/.tmux/plugins/tpm/tpm' >> ~/.tmux.conf
 
 ~/.tmux/plugins/tpm/bin/install_plugins
 
-yum install -y ruby ruby-devel lua lua-devel luajit \
-    luajit-devel ctags git python python-devel \
+git clone http://luajit.org/git/luajit-2.0.git
+cd luajit-2.0
+make && make install
+
+yum install -y ruby ruby-devel lua lua-devel  \
+    ctags git python python-devel \
     python34 python34-devel tcl-devel \
     perl perl-devel perl-ExtUtils-ParseXS \
     perl-ExtUtils-XSpp perl-ExtUtils-CBuilder \
     perl-ExtUtils-Embed
-
 
 git clone https://github.com/vim/vim.git
 cd vim
