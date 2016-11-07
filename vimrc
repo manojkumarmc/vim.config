@@ -177,6 +177,11 @@ set guifont=Consolas:h12:cANSI
 
 filetype plugin on
 syntax on
+
+" omnicompletion setup
+set omnifunc=syntaxcomplete#Complete
+set completeopt+=longest
+
 set relativenumber
 set wildmenu
 
