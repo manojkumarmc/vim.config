@@ -18,10 +18,10 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-"Plugin 'Valloric/YouCompleteMe' " please make sure that you have python-dev and ruby-dev installed :)
+Plugin 'Valloric/YouCompleteMe' " please make sure that you have python-dev and ruby-dev installed :)
 
 " The ultimate searcher
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " The in file searcher
 Plugin 'Lokaltog/vim-easymotion'
@@ -55,6 +55,8 @@ Plugin 'airblade/vim-gitgutter'
 
 " Python charmer
 Plugin 'klen/python-mode'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'tell-k/vim-autopep8'
 
 " Multiple language mgmt
 Plugin 'scrooloose/syntastic'
@@ -76,7 +78,7 @@ Plugin 'bronson/vim-trailing-whitespace' " whitespace cleaner
 
 " Typescript plugins
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'Shougo/vimproc.vim' " this needs to be built from source
+Plugin 'Shougo/vimproc.vim', {'do' : 'make'}  " this needs to be built from source
 Plugin 'Quramy/tsuquyomi'
 Plugin 'leafgarland/typescript-vim'
 
@@ -239,6 +241,12 @@ let g:syntastic_typescript_tsc_args = "--experimentalDecorators"
 let g:airline_powerline_fonts=1
 
 " vim hanging issue on python save - critical fix
-let g:pymode_rope = 0
-let g:pymode_rope_lookup_project = 0
+" let g:pymode_rope = 0
+" let g:pymode_rope_lookup_project = 0
+"
+set clipboard=unnamedplus
+let g:webdevicons_conceal_nerdtree_brackets = 1
 
+let g:yankring_clipboard_monitor=0
+let g:ctrlp_max_files=40000
+let g:ctrlp_max_depth=40
