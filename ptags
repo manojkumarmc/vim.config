@@ -13,7 +13,7 @@
 import sys, re, os
 import argparse
 
-tags = []    # Modified global variable!
+tags = []
 
 def main():
     for root, folders, files in os.walk(args.folder_to_index):
