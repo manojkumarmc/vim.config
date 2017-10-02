@@ -1,0 +1,3 @@
+copy the file to a location in PATH
+run ptags -R . on the source file
+voila...!

@@ -251,3 +251,16 @@ let g:webdevicons_conceal_nerdtree_brackets = 1
 let g:yankring_clipboard_monitor=0
 let g:ctrlp_max_files=40000
 let g:ctrlp_max_depth=40
+
+inoremap <silent> ;o <C-o>o
+inoremap <silent> ;a <C-o><S-a>
+inoremap <silent> ;h <C-o>h
+inoremap <silent> ;j <C-o>j
+inoremap <silent> ;k <C-o>k
+inoremap <silent> ;l <C-o>l
+inoremap <silent> ;b <C-o>b
+inoremap <silent> ;w <C-o>w
+inoremap <silent> ;[ <C-o>{
+inoremap <silent> ;] <C-o>}
+inoremap <silent> ;0 <C-o>0
+
