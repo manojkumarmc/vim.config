@@ -264,3 +264,4 @@ inoremap <silent> ;[ <C-o>{
 inoremap <silent> ;] <C-o>}
 inoremap <silent> ;0 <C-o>0
 
+noremap ff :NERDTreeFind<CR>
