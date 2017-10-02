@@ -1,3 +1,4 @@
+ptags are needed since module lookup is not available in ctags
 copy the file to a location in PATH
 run ptags -R . on the source file
 voila...!
