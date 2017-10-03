@@ -265,3 +265,6 @@ inoremap <silent> ;] <C-o>}
 inoremap <silent> ;0 <C-o>0
 
 noremap ff :NERDTreeFind<CR>
+map <F6> :setlocal spell! spelllang=en_us<CR>
+nnoremap ; :
+nnoremap : ;
