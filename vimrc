@@ -224,7 +224,6 @@ hi CursorLine NONE gui=underline term=underline cterm=underline
 " Have a helpful line
 set cursorline
 
-noremap <F3> :Autoformat<CR><CR>
 
 "##################################
 " touch ~/.ctags
@@ -265,4 +264,13 @@ inoremap <silent> ;] <C-o>}
 inoremap <silent> ;0 <C-o>0
 
 noremap ;f :NERDTreeFind<CR>
+
+" Toggle enabled spellcheck
 map <F6> :setlocal spell! spelllang=en_us<CR>
+
+" run the command on the shell and return the data
+nnoremap Q !!/bin/sh<CR> 
+
+" Autoformat on the command
+noremap <F3> :Autoformat<CR><CR>
+
