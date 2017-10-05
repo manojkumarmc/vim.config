@@ -7,4 +7,7 @@ ctags --file-scope=yes \
       --verbose=yes \
       --extra=+q \
       -f ~/my-tags -R /absolute/path/of/project
+
+echo set tags=+~/my-tags >> ~/.vimrc
+
 voila...!
