@@ -65,6 +65,7 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'honza/vim-snippets'
 Plugin 'SirVer/ultisnips'
 Plugin 'rstacruz/sparkup' " html autogenerator
+Plugin 'Chiel92/vim-autoformat'
 
 " vim behaviour
 Plugin 'tpope/vim-repeat'
@@ -231,11 +232,6 @@ hi CursorLine NONE gui=underline term=underline cterm=underline
 " Have a helpful line
 set cursorline
 
-
-"##################################
-" touch ~/.ctags
-" echo --python-kinds=-i >> ~/.ctags
-
 let g:typescript_compiler_binary = 'tsc'
 let g:typescript_compiler_options = ''
 autocmd QuickFixCmdPost [^l]* nested cwindow
@@ -276,8 +272,10 @@ noremap ;f :NERDTreeFind<CR>
 map <F6> :setlocal spell! spelllang=en_us<CR>
 
 " run the command on the shell and return the data
-nnoremap Q !!/bin/sh<CR> 
+nnoremap Q !!/bin/sh<CR>
 
 " Autoformat on the command
 noremap <F3> :Autoformat<CR><CR>
 
+" adhere to pep8 formatting
+let g:formatter_yapf_style = 'pep8'
