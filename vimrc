@@ -75,6 +75,7 @@ Plugin 'rking/ag.vim' " need to install the_silver_searcher
 Plugin 'sickill/vim-pasta' " intendation manager
 Plugin 'bronson/vim-trailing-whitespace' " whitespace cleaner
 Plugin 'tommcdo/vim-exchange' "the ultimate exchange
+Plugin 'nelstrom/vim-visual-star-search'
 
 "Plugin 'tpope/vim-obsession'
 
