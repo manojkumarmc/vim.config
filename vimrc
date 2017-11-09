@@ -145,7 +145,7 @@ let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc
 nnoremap <F5> :GundoToggle<CR>
 
 " Ultisnips functionality tuning
-let g:UltiSnipsExpandTrigger='<c-a>'
+let g:UltiSnipsExpandTrigger='<c-m>'
 let g:UltiSnipsListSnippets='<c-j>'
 let g:UltiSnipsJumpForwardTrigger='<c-l>'
 let g:UltiSnipsJumpBackwardTrigger='<c-h>'
@@ -180,7 +180,7 @@ set foldlevel=1
 " If Droid Sans Mono dont exist
 set guifont=Consolas:h12:cANSI
 
-filetype plugin on
+" filetype plugin on
 syntax on
 
 " omnicompletion setup
