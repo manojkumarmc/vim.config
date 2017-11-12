@@ -145,7 +145,7 @@ let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc
 nnoremap <F5> :GundoToggle<CR>
 
 " Ultisnips functionality tuning
-let g:UltiSnipsExpandTrigger='<c-m>'
+let g:UltiSnipsExpandTrigger='<c-k>'
 let g:UltiSnipsListSnippets='<c-j>'
 let g:UltiSnipsJumpForwardTrigger='<c-l>'
 let g:UltiSnipsJumpBackwardTrigger='<c-h>'
