@@ -267,7 +267,7 @@ inoremap <silent> ;[ <C-o>{
 inoremap <silent> ;] <C-o>}
 inoremap <silent> ;0 <C-o>0
 
-noremap ;f :NERDTreeFind<CR>
+noremap ,ff :NERDTreeFind<CR>
 
 " Toggle enabled spellcheck
 map <F6> :setlocal spell! spelllang=en_us<CR>
@@ -280,3 +280,16 @@ noremap <F3> :Autoformat<CR><CR>
 
 " adhere to pep8 formatting
 let g:formatter_yapf_style = 'pep8'
+
+set tags+=$HOME/full-tags
+
+" toggle relativenumber
+set number relativenumber
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
+" beautify Gvdiff
+au FilterWritePre * if &diff | colorscheme evening | endif
