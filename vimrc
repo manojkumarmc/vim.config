@@ -293,3 +293,7 @@ augroup END
 
 " beautify Gvdiff
 au FilterWritePre * if &diff | colorscheme evening | endif
+      
+" search always to center
+noremap n nzz
+noremap N Nzz
