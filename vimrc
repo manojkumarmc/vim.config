@@ -297,3 +297,7 @@ au FilterWritePre * if &diff | colorscheme evening | endif
 " search always to center
 noremap n nzz
 noremap N Nzz
+
+" crtl-f for normal search
+inoremap <c-f> <esc>:Ag 
+noremap <c-f> <esc>:Ag 
