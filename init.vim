@@ -303,3 +303,5 @@ noremap <c-f> <esc>:Ag
 " search always to center
 noremap n nzz
 noremap N Nzz
+
+vnoremap c2m didef()<Esc>hpF(vt):s/ /,/g<CR><S-a>:<CR><Tab>
