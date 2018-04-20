@@ -1,7 +1,4 @@
 
-
-
-
 "this is needed to make sure that ultisnips works finally...!
 filetype off
 
@@ -47,10 +44,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 " Python charmer
-" Plug 'klen/python-mode'
-Plug 'davidhalter/jedi-vim'
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
+" Plug 'davidhalter/jedi-vim'
 " Plug 'tell-k/vim-autopep8'
-Plug 'google/yapf'
+" Plug 'google/yapf'
 
 " Multiple language mgmt
 Plug 'scrooloose/syntastic'
@@ -93,6 +90,7 @@ Plug 'glts/vim-cottidie'
 
 " Terminal
 Plug 'kassio/neoterm'
+Plug 'fatih/vim-go'
 
 call plug#end()
 
@@ -196,14 +194,20 @@ set lazyredraw
 " vim-airline was not coming default
 set laststatus=2
 
+"mkmc
+"mkmclet g:pymode = 0
+let g:pymode_folding = 0
 " Remove red bar in pymode
 let g:pymode_options_colorcolumn = 0
-
 " No auto document display in python mode
 set completeopt=menu
-
 " Enable debugging
 let g:pymode_breakpoint = 1
+
+" vim hanging issue on python save - critical fix
+" let g:pymode_rope = 0
+" let g:pymode_rope_lookup_project = 0
+"
 
 " No swapfile
 set noswapfile
@@ -242,12 +246,7 @@ let g:syntastic_typescript_tsc_args = "--experimentalDecorators"
 
 " To sync the fonts with airline
 let g:airline_powerline_fonts=1
-
-" vim hanging issue on python save - critical fix
-" let g:pymode_rope = 0
-" let g:pymode_rope_lookup_project = 0
-"
-set clipboard=unnamed
+" set clipboard=unnamed
 let g:webdevicons_conceal_nerdtree_brackets = 1
 
 let g:yankring_clipboard_monitor=0
@@ -297,11 +296,12 @@ endfunction
 
 au FilterWritePre * if &diff | colorscheme evening | endif
 
-inoremap <c-f> <esc>:Ag 
-noremap <c-f> <esc>:Ag 
+inoremap <c-f> <esc>:Ag
+noremap <c-f> <esc>:Ag
 
 " search always to center
 noremap n nzz
 noremap N Nzz
 
-vnoremap c2m didef()<Esc>hpF(vt):s/ /,/g<CR><S-a>:<CR><Tab>
+set nohlsearch
+" let mapleader = ','
