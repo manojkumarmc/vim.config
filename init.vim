@@ -92,6 +92,10 @@ Plug 'glts/vim-cottidie'
 Plug 'kassio/neoterm'
 Plug 'fatih/vim-go'
 
+" The ultimate fuzzy finder
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 " Needed to get ultisnips working
