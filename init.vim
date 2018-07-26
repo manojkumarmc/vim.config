@@ -62,7 +62,8 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'tpope/vim-repeat'
 Plug 'tmhedberg/SimpylFold'
 Plug 'terryma/vim-smooth-scroll'
-Plug 'rking/ag.vim' " need to install the_silver_searcher
+" Removing ag dependency cos of the awesome fzf
+" Plug 'rking/ag.vim' " need to install the_silver_searcher
 Plug 'sickill/vim-pasta' " intendation manager
 Plug 'bronson/vim-trailing-whitespace' " whitespace cleaner
 Plug 'tommcdo/vim-exchange' "the ultimate exchange
@@ -309,3 +310,15 @@ noremap N Nzz
 
 set nohlsearch
 " let mapleader = ','
+
+" This is to manage preview of fzf Files command
+command! -bang -nargs=? -complete=dir Files
+\ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+
+" This is to manage preview of fzf Ag command
+command! -bang -nargs=* Ag
+      \ call fzf#vim#ag(<q-args>,
+      \                 <bang>0 ? fzf#vim#with_preview('up:60%')
+      \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
+      \                 <bang>0)
+
