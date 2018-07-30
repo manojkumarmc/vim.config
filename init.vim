@@ -322,3 +322,5 @@ command! -bang -nargs=* Ag
       \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
       \                 <bang>0)
 
+" yaml formatter
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
