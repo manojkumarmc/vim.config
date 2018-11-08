@@ -253,7 +253,6 @@ let g:syntastic_typescript_tsc_args = "--experimentalDecorators"
 let g:airline_powerline_fonts=1
 " set clipboard=unnamed
 let g:webdevicons_conceal_nerdtree_brackets = 1
-
 let g:yankring_clipboard_monitor=0
 let g:ctrlp_max_files=40000
 let g:ctrlp_max_depth=40
@@ -324,3 +323,18 @@ command! -bang -nargs=* Ag
 
 " yaml formatter
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+" xclip is needed for this
+" set clipboard+=unnamedplus
+let g:clipboard = {
+  \   'name': 'xclip-xfce4-clipman',
+  \   'copy': {
+  \      '+': 'xclip -selection clipboard',
+  \      '*': 'xclip -selection clipboard',
+  \    },
+  \   'paste': {
+  \      '+': 'xclip -selection clipboard -o',
+  \      '*': 'xclip -selection clipboard -o',
+  \   },
+  \   'cache_enabled': 1,
+  \ }
