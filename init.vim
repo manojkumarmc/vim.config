@@ -30,6 +30,7 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'majutsushi/tagbar'
 Plug 'vim-scripts/taglist.vim'
+Plug 'ryanoasis/vim-devicons'
 
 
 " JS beautifiers
@@ -91,11 +92,15 @@ Plug 'glts/vim-cottidie'
 
 " Terminal
 Plug 'kassio/neoterm'
-Plug 'fatih/vim-go'
+" Plug 'fatih/vim-go'
 
 " The ultimate fuzzy finder
-Plug '/usr/local/opt/fzf'
+set rtp+=~/.fzf
+Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
+
+" The magic alignment
+Plug 'junegunn/vim-easy-align'
 
 call plug#end()
 
@@ -251,8 +256,10 @@ let g:syntastic_typescript_tsc_args = "--experimentalDecorators"
 
 " To sync the fonts with airline
 let g:airline_powerline_fonts=1
+set clipboard+=unnamedplus
 " set clipboard=unnamed
 let g:webdevicons_conceal_nerdtree_brackets = 1
+
 let g:yankring_clipboard_monitor=0
 let g:ctrlp_max_files=40000
 let g:ctrlp_max_depth=40
@@ -325,7 +332,6 @@ command! -bang -nargs=* Ag
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 " xclip is needed for this
-" set clipboard+=unnamedplus
 let g:clipboard = {
   \   'name': 'xclip-xfce4-clipman',
   \   'copy': {
@@ -338,3 +344,9 @@ let g:clipboard = {
   \   },
   \   'cache_enabled': 1,
   \ }
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
