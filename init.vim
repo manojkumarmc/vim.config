@@ -2,6 +2,7 @@
 "this is needed to make sure that ultisnips works finally...!
 filetype off
 
+
 call plug#begin()
 
 Plug 'tpope/vim-sensible'
@@ -32,11 +33,6 @@ Plug 'majutsushi/tagbar'
 Plug 'vim-scripts/taglist.vim'
 Plug 'ryanoasis/vim-devicons'
 
-
-" JS beautifiers
-Plug 'maksimr/vim-jsbeautify'
-Plug 'einars/js-beautify'
-
 " Tabss
 Plug 'ervandew/supertab'
 
@@ -46,9 +42,6 @@ Plug 'airblade/vim-gitgutter'
 
 " Python charmer
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
-" Plug 'davidhalter/jedi-vim'
-" Plug 'tell-k/vim-autopep8'
-" Plug 'google/yapf'
 
 " Multiple language mgmt
 Plug 'scrooloose/syntastic'
@@ -57,14 +50,12 @@ Plug 'tomtom/tcomment_vim'
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
 Plug 'rstacruz/sparkup' " html autogenerator
-Plug 'Chiel92/vim-autoformat'
+Plug 'w0rp/ale' " formatter
 
 " vim behaviour
 Plug 'tpope/vim-repeat'
 Plug 'tmhedberg/SimpylFold'
 Plug 'terryma/vim-smooth-scroll'
-" Removing ag dependency cos of the awesome fzf
-" Plug 'rking/ag.vim' " need to install the_silver_searcher
 Plug 'sickill/vim-pasta' " intendation manager
 Plug 'bronson/vim-trailing-whitespace' " whitespace cleaner
 Plug 'tommcdo/vim-exchange' "the ultimate exchange
@@ -92,7 +83,8 @@ Plug 'glts/vim-cottidie'
 
 " Terminal
 Plug 'kassio/neoterm'
-" Plug 'fatih/vim-go'
+Plug 'mdempsky/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
+Plug 'fatih/vim-go'
 
 " The ultimate fuzzy finder
 set rtp+=~/.fzf
@@ -295,8 +287,8 @@ augroup numbertoggle
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
 
-let g:formatters_python = ['yapf', 'autopep8']
-let g:formatter_yapf_style = 'yapf;ALIGN_CLOSING_BRACKET_WITH_VISUAL_INDENT;COALESCE_BRACKETS'
+" let g:formatters_python = ['yapf', 'autopep8']
+" let g:formatter_yapf_style = 'yapf;ALIGN_CLOSING_BRACKET_WITH_VISUAL_INDENT;COALESCE_BRACKETS'
 
 let g:ycm_use_ultisnips_completer = 1
 
@@ -342,7 +334,7 @@ let g:clipboard = {
   \      '+': 'xclip -selection clipboard -o',
   \      '*': 'xclip -selection clipboard -o',
   \   },
-  \   'cache_enabled': 1,
+  \   'cache_enabled': 1
   \ }
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
@@ -350,3 +342,40 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+let g:ycm_global_ycm_extra_conf = '/home/mmc/.config/nvim/plugged/YouCompleteMe/.ycm_extra_conf.py'
+
+let g:ale_linters = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['tsserver'],
+\   'json': ['prettier'],
+\   'TypeScript': ['prettier'],
+\   'yaml': ['yamllint'],
+\   'reStructuredText': ['rstcheck'],
+\   'go': ['gofmt'],
+\   'html': ['prettier'],
+\   'python': ['flake8']
+\}
+
+
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['prettier'],
+\   'json': ['prettier'],
+\   'TypeScript': ['prettier'],
+\   'yaml': ['prettier'],
+\   'reStructuredText': ['rstcheck'],
+\   'go': ['gofmt'],
+\   'html': ['prettier'],
+\   'python': ['yapf']
+\}
+
+nmap <F9> <Plug>(ale_fix)
+
+let g:ale_python_pylint_options = '--ignore-docstrings=y'
+
+hi Visual  guifg=White guibg=LightBlue gui=none
+let g:go_version_warning = 0
+
+vnoremap \q c()<ESC>PF(i
+
