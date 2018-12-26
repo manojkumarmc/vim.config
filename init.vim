@@ -1,16 +1,12 @@
-
 "this is needed to make sure that ultisnips works finally...!
 filetype off
-
 
 call plug#begin()
 
 Plug 'tpope/vim-sensible'
 
-Plug 'Valloric/YouCompleteMe' " please make sure that you have python-dev and ruby-dev installed :)
-
-" The ultimate searcher
-Plug 'ctrlpvim/ctrlp.vim'
+" Absoute 
+Plug 'Valloric/YouCompleteMe'
 
 " The in file searcher
 Plug 'Lokaltog/vim-easymotion'
@@ -40,9 +36,6 @@ Plug 'ervandew/supertab'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
-" Python charmer
-Plug 'python-mode/python-mode', { 'branch': 'develop' }
-
 " Multiple language mgmt
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-surround'
@@ -61,20 +54,12 @@ Plug 'bronson/vim-trailing-whitespace' " whitespace cleaner
 Plug 'tommcdo/vim-exchange' "the ultimate exchange
 Plug 'nelstrom/vim-visual-star-search'
 
-"Plug 'tpope/vim-obsession'
-
-" Typescript plugins
-Plug 'jiangmiao/auto-pairs'
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}  " this needs to be built from source
-Plug 'Quramy/tsuquyomi'
-Plug 'leafgarland/typescript-vim'
-
-" Plug 'magarcia/vim-angular2-snippets' " syntax issues
+" Python charmer
+Plug 'davidhalter/jedi-vim'
 
 " Manage Dockerfile
 Plug 'ekalinin/Dockerfile.vim'
 
-" Icons
 " Install the amazaing nerd fonts for this
 Plug 'ryanoasis/vim-devicons'
 
@@ -98,6 +83,7 @@ call plug#end()
 
 " Needed to get ultisnips working
 filetype indent plugin on
+syntax on
 
 "Nerdtree toggling enabled
 function OpenNERDTree()
@@ -147,11 +133,6 @@ let g:UltiSnipsListSnippets='<c-j>'
 let g:UltiSnipsJumpForwardTrigger='<c-l>'
 let g:UltiSnipsJumpBackwardTrigger='<c-h>'
 
-" Autocmd to beautify functions
-autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
-autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
-autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
-
 " For the smooth scroll
 noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
@@ -171,24 +152,12 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=1
 
-" Pray that it exist
-" colorscheme xoria256 " even molokai
-
-" If Droid Sans Mono dont exist
-set guifont=Consolas:h12:cANSI
-
-filetype plugin on
-syntax on
-
 " omnicompletion setup
 set omnifunc=syntaxcomplete#Complete
 set completeopt+=longest
 
-" set relativenumber
+" set the wild menu
 set wildmenu
-" set number relativenumber
-" set nonumber norelativenumber  " turn hybrid line numbers off
-" set !number !relativenumber    " toggle hybrid line numbers
 
 "Let it be smooth
 set lazyredraw
@@ -196,20 +165,18 @@ set lazyredraw
 " vim-airline was not coming default
 set laststatus=2
 
-"mkmc
-"mkmclet g:pymode = 0
+let g:pymode = 0
 let g:pymode_folding = 0
+
 " Remove red bar in pymode
 let g:pymode_options_colorcolumn = 0
-" No auto document display in python mode
-set completeopt=menu
+
 " Enable debugging
 let g:pymode_breakpoint = 1
 
 " vim hanging issue on python save - critical fix
-" let g:pymode_rope = 0
-" let g:pymode_rope_lookup_project = 0
-"
+let g:pymode_rope = 0
+let g:pymode_rope_lookup_project = 0
 
 " No swapfile
 set noswapfile
@@ -234,12 +201,6 @@ set cursorline
 
 noremap <F3> :Autoformat<CR><CR>
 
-"##################################
-" touch ~/.ctags
-" echo --python-kinds=-i >> ~/.ctags
-
-let g:typescript_compiler_binary = 'tsc'
-let g:typescript_compiler_options = ''
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
 
@@ -249,13 +210,10 @@ let g:syntastic_typescript_tsc_args = "--experimentalDecorators"
 " To sync the fonts with airline
 let g:airline_powerline_fonts=1
 set clipboard+=unnamedplus
-" set clipboard=unnamed
 let g:webdevicons_conceal_nerdtree_brackets = 1
 
 let g:yankring_clipboard_monitor=0
-let g:ctrlp_max_files=40000
-let g:ctrlp_max_depth=40
-let g:ycm_use_ultisnips_completer = 1
+let g:ycm_use_ultisnips_completer = 0
 
 inoremap <silent> ,o <C-o>o
 inoremap <silent> ,a <C-o><S-a>
@@ -273,12 +231,6 @@ noremap ,ff :NERDTreeFind<CR>
 map <F6> :setlocal spell! spelllang=en_us<CR>
 set tags+=$HOME/full-tags
 
-
-function CreateMyTags(filetype, foldername)
-  echom a:filetype
-  echom a:foldername
-endfunction
-
 set number relativenumber
 
 augroup numbertoggle
@@ -287,15 +239,7 @@ augroup numbertoggle
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
 
-" let g:formatters_python = ['yapf', 'autopep8']
-" let g:formatter_yapf_style = 'yapf;ALIGN_CLOSING_BRACKET_WITH_VISUAL_INDENT;COALESCE_BRACKETS'
-
-let g:ycm_use_ultisnips_completer = 1
-
-
-function TryThis()
-  !touch /opt/chumma.txt
-endfunction
+" let g:ycm_use_ultisnips_completer = 1
 
 au FilterWritePre * if &diff | colorscheme evening | endif
 
@@ -343,8 +287,10 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
+let g:ycm_auto_trigger = 0
 let g:ycm_global_ycm_extra_conf = '/home/mmc/.config/nvim/plugged/YouCompleteMe/.ycm_extra_conf.py'
 
+let g:ale_enabled = 0
 let g:ale_linters = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['tsserver'],
@@ -374,8 +320,7 @@ nmap <F9> <Plug>(ale_fix)
 
 let g:ale_python_pylint_options = '--ignore-docstrings=y'
 
-hi Visual  guifg=White guibg=LightBlue gui=none
+"hi Visual  guifg=White guibg=LightBlue gui=none
 let g:go_version_warning = 0
 
 vnoremap \q c()<ESC>PF(i
-
