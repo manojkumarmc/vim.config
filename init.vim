@@ -37,6 +37,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 " Multiple language mgmt
+Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-surround'
 Plug 'tomtom/tcomment_vim'
