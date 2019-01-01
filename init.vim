@@ -3,9 +3,9 @@ filetype off
 
 call plug#begin()
 
-Plug 'tpope/vim-sensible'
+" Plug 'tpope/vim-sensible'
 
-" Absoute 
+" Absoute
 Plug 'Valloric/YouCompleteMe'
 
 " The in file searcher
@@ -155,7 +155,6 @@ set foldlevel=1
 
 " omnicompletion setup
 set omnifunc=syntaxcomplete#Complete
-set completeopt+=longest
 
 " set the wild menu
 set wildmenu
@@ -214,7 +213,6 @@ set clipboard+=unnamedplus
 let g:webdevicons_conceal_nerdtree_brackets = 1
 
 let g:yankring_clipboard_monitor=0
-let g:ycm_use_ultisnips_completer = 0
 
 inoremap <silent> ,o <C-o>o
 inoremap <silent> ,a <C-o><S-a>
@@ -239,8 +237,6 @@ augroup numbertoggle
   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
-
-" let g:ycm_use_ultisnips_completer = 1
 
 au FilterWritePre * if &diff | colorscheme evening | endif
 
@@ -288,8 +284,9 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-let g:ycm_auto_trigger = 0
+let g:ycm_auto_trigger = 1
 let g:ycm_global_ycm_extra_conf = '/home/mmc/.config/nvim/plugged/YouCompleteMe/.ycm_extra_conf.py'
+let g:ycm_use_ultisnips_completer = 1
 
 let g:ale_enabled = 0
 let g:ale_linters = {
@@ -325,3 +322,4 @@ let g:ale_python_pylint_options = '--ignore-docstrings=y'
 let g:go_version_warning = 0
 
 vnoremap \q c()<ESC>PF(i
+
