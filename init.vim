@@ -3,7 +3,7 @@ filetype off
 
 call plug#begin()
 
-" Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-sensible'
 
 " Absoute
 Plug 'Valloric/YouCompleteMe'
@@ -54,6 +54,7 @@ Plug 'sickill/vim-pasta' " intendation manager
 Plug 'bronson/vim-trailing-whitespace' " whitespace cleaner
 Plug 'tommcdo/vim-exchange' "the ultimate exchange
 Plug 'nelstrom/vim-visual-star-search'
+Plug 'Yggdroot/indentLine'
 
 " Python charmer
 Plug 'davidhalter/jedi-vim'
@@ -155,6 +156,9 @@ set foldlevel=1
 
 " omnicompletion setup
 set omnifunc=syntaxcomplete#Complete
+" set completeopt+=longest
+" set completeopt=preview,menuone
+
 
 " set the wild menu
 set wildmenu
@@ -291,7 +295,7 @@ let g:ycm_use_ultisnips_completer = 1
 let g:ale_enabled = 0
 let g:ale_linters = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'javascript': ['tsserver'],
+\   'javascript': ['prettier'],
 \   'json': ['prettier'],
 \   'TypeScript': ['prettier'],
 \   'yaml': ['yamllint'],
@@ -311,7 +315,7 @@ let g:ale_fixers = {
 \   'reStructuredText': ['rstcheck'],
 \   'go': ['gofmt'],
 \   'html': ['prettier'],
-\   'python': ['yapf']
+\   'python': ['black']
 \}
 
 nmap <F9> <Plug>(ale_fix)
@@ -323,3 +327,4 @@ let g:go_version_warning = 0
 
 vnoremap \q c()<ESC>PF(i
 
+let g:indentLine_char = '|'
