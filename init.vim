@@ -38,7 +38,7 @@ Plug 'airblade/vim-gitgutter'
 
 " Multiple language mgmt
 Plug 'jiangmiao/auto-pairs'
-Plug 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-surround'
 Plug 'tomtom/tcomment_vim'
 Plug 'honza/vim-snippets'
@@ -58,6 +58,7 @@ Plug 'Yggdroot/indentLine'
 
 " Python charmer
 Plug 'davidhalter/jedi-vim'
+Plug 'fisadev/vim-isort'
 
 " Manage Dockerfile
 Plug 'ekalinin/Dockerfile.vim'
@@ -321,3 +322,6 @@ let g:go_version_warning = 0
 vnoremap \q c()<ESC>PF(i
 
 let g:indentLine_char = '|'
+
+let g:vim_isort_map = '<C-i>'
+let g:vim_isort_python_version = 'python3'
