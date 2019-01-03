@@ -113,6 +113,7 @@ let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
+let g:syntastic_typescript_tsc_args = "--experimentalDecorators"  "Remove experimentalDecorators error
 
 let g:EasyMotion_leader_key = ','
 
@@ -156,9 +157,6 @@ set foldlevel=1
 
 " omnicompletion setup
 set omnifunc=syntaxcomplete#Complete
-" set completeopt+=longest
-" set completeopt=preview,menuone
-
 
 " set the wild menu
 set wildmenu
@@ -208,8 +206,6 @@ noremap <F3> :Autoformat<CR><CR>
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
 
-" Remove experimentalDecorators error
-let g:syntastic_typescript_tsc_args = "--experimentalDecorators"
 
 " To sync the fonts with airline
 let g:airline_powerline_fonts=1
@@ -284,7 +280,6 @@ let g:clipboard = {
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
-
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
@@ -293,6 +288,9 @@ let g:ycm_global_ycm_extra_conf = '/home/mmc/.config/nvim/plugged/YouCompleteMe/
 let g:ycm_use_ultisnips_completer = 1
 
 let g:ale_enabled = 0
+nmap <F9> <Plug>(ale_fix)
+let g:ale_python_pylint_options = '--ignore-docstrings=y'
+
 let g:ale_linters = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['prettier'],
@@ -305,7 +303,6 @@ let g:ale_linters = {
 \   'python': ['flake8']
 \}
 
-
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['prettier'],
@@ -317,10 +314,6 @@ let g:ale_fixers = {
 \   'html': ['prettier'],
 \   'python': ['black']
 \}
-
-nmap <F9> <Plug>(ale_fix)
-
-let g:ale_python_pylint_options = '--ignore-docstrings=y'
 
 "hi Visual  guifg=White guibg=LightBlue gui=none
 let g:go_version_warning = 0
