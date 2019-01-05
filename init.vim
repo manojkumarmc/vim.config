@@ -294,9 +294,9 @@ let g:ale_python_pylint_options = '--ignore-docstrings=y'
 
 let g:ale_linters = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'javascript': ['prettier'],
-\   'json': ['prettier'],
-\   'TypeScript': ['prettier'],
+\   'javascript': ['standard'],
+\   'json': ['standard'],
+\   'TypeScript': ['standard'],
 \   'yaml': ['yamllint'],
 \   'reStructuredText': ['rstcheck'],
 \   'go': ['gofmt'],
@@ -306,10 +306,10 @@ let g:ale_linters = {
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'javascript': ['prettier'],
-\   'json': ['prettier'],
-\   'TypeScript': ['prettier'],
-\   'yaml': ['prettier'],
+\   'javascript': ['standard'],
+\   'json': ['standard'],
+\   'TypeScript': ['standard'],
+\   'yaml': ['yamllint'],
 \   'reStructuredText': ['rstcheck'],
 \   'go': ['gofmt'],
 \   'html': ['prettier'],
