@@ -291,29 +291,30 @@ let g:ycm_use_ultisnips_completer = 1
 let g:ale_enabled = 0
 nmap <F9> <Plug>(ale_fix)
 let g:ale_python_pylint_options = '--ignore-docstrings=y'
+let g:ale_python_black_options = '--fast'
 
 let g:ale_linters = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'javascript': ['standard'],
-\   'json': ['standard'],
-\   'TypeScript': ['standard'],
-\   'yaml': ['yamllint'],
+\   '*':                ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript':       ['standard'],
+\   'json':             ['standard'],
+\   'TypeScript':       ['standard'],
+\   'yaml':             ['yamllint'],
 \   'reStructuredText': ['rstcheck'],
-\   'go': ['gofmt'],
-\   'html': ['prettier'],
-\   'python': ['flake8']
+\   'go':               ['gofmt'],
+\   'html':             ['prettier'],
+\   'python':           ['flake8']
 \}
 
 let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'javascript': ['standard'],
-\   'json': ['standard'],
-\   'TypeScript': ['standard'],
-\   'yaml': ['yamllint'],
+\   '*':                ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript':       ['standard'],
+\   'json':             ['standard'],
+\   'TypeScript':       ['standard'],
+\   'yaml':             ['yamllint'],
 \   'reStructuredText': ['rstcheck'],
-\   'go': ['gofmt'],
-\   'html': ['prettier'],
-\   'python': ['black']
+\   'go':               ['gofmt'],
+\   'html':             ['prettier'],
+\   'python':           ['black']
 \}
 
 "hi Visual  guifg=White guibg=LightBlue gui=none
