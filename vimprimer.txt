@@ -36,11 +36,11 @@ gm	middle of line
 f[char]	forward to a char
 F[char] backward to a char
 
-gg	         begining of file
-G            end of file
-50G	goto     the 50th line
+gg    begining of file
+G     end of file
+50G	  got the 50th line
 CTRL_G       To get the position of the file
-g            CTRL_G To get more info of the current position
+g CTRL_G     To get more info of the current position
 
 Hzz     shift the top of the screen to the middle of the screen
 Lzz     bottom of the screen to the middle of the screen
