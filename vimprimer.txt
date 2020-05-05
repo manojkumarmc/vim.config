@@ -11,6 +11,11 @@ l = right
 Screen motion keys
 =====================
 
+w     Begining of next word
+b     Begining of previous word
+e     End of next word
+ge    End of previous word
+
 n%    Go to a percent of the file content
 C-f 	Jump one page down
 C-b 	Jump one page up
@@ -34,6 +39,8 @@ F[char] backward to a char
 gg	begining of file
 G   end of file
 50G	goto the 50th line
+CTRL_G To get the position of the file
+g CTRL_G To get more info of the current position
 
 Hzz     shift the top of the screen to the middle of the screen
 Lzz     bottom of the screen to the middle of the screen
@@ -95,7 +102,7 @@ Text Object
 	p	paragraph
 	t	tags
 
-Eg : 	
+Eg :
   diw   delete in word
 	caw   change in word
 	ci"   change all inner the quotes
@@ -129,13 +136,13 @@ O     Insert after pusing the current like down
 x     Delete current char
 X     Delete previous char
 dd	  Delete current line
-.   	repeat 
+.   	repeat
 dw    Delete current word with space
 de    Delete current word without space
 cw    Change current word
 r     Replace current char
 R     Replace all chars
-S-c   change from current position, deletes the rest 
+S-c   change from current position, deletes the rest
 
 Visual Mode
 =====================
@@ -145,7 +152,7 @@ Shft v	Visual line mode
 
 iw	select the current word in visual mode
 aw	select a word
-aW	select a word with whitespace 
+aW	select a word with whitespace
 as	select a sentence
 is	select inner sentence
 ap
@@ -155,14 +162,14 @@ aB
 iB
 
 at	tagwise
-it	
+it
 
 Insert Mode
 =====================
 Ctrl n      Autocomplete with next available words
 Ctrl p      Autocomplete with previous words
 Ctrl t      Tab
-Ctrl d      Tab backward	
+Ctrl d      Tab backward
 Ctrl x + l	Search line
 Ctrl x + f	Search file system
 
@@ -205,9 +212,9 @@ k         Move Up
 l         Move Right
 o         Maximise and kill all the other windows
 H         Move window position Left
-J         Move window position Down 
-K         Move window position Up 
-L         Move window position Right	
+J         Move window position Down
+K         Move window position Up
+L         Move window position Right
 :vsp      Vertical Split
 :sp       Horizontal Split
 
@@ -263,7 +270,7 @@ zO	open all folds
 Python mode
 =====================
 K		documentation
-Ctrl C g	go to definition	
+Ctrl C g	go to definition
 
 Operations
 ===========
@@ -271,25 +278,25 @@ Operations
     -------------------------------
     1. select text
     2. press ~ or g~ or g~~
-    
+
   - Sorting line
     -------------------------------
     1. Add 1. to each line by %/^/1./g
     2. Select lines in visual mode
     3. g Ctrl-a should do the trick
-    
+
   - Buffer to the current working directory
     ---------------------------------------
     :lcd %:h
-  
+
   - Delete all in a file on the basis of filter
     -------------------------------------------
     v/[your_text]/d
-    
+
   - Change working directory to the file on buffer
     ----------------------------------------------
     lcd %:p:h
-  
+
   - Vim surround magic
     ys2w " - surround 2 words with quote
     ys$ "  - surroung till end of line with "
@@ -300,11 +307,11 @@ Read from OS
     :r !{file} - reads the file from the os to the buffer
     :r !{cmd}  - reads the command to the current buffer
     :. !{cmd}  - reads the current line send to the external program and replaces the line with the output
-      eg : .! figlet 
+      eg : .! figlet
          : .! cowsay
          : .! pastebinit
     :h :read!
     :h filter
 
-    
+
 
