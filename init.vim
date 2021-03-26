@@ -3,26 +3,20 @@ filetype off
 
 call plug#begin()
 Plug 'tpope/vim-sensible'
-Plug 'neovim/nvim-lsp'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-Plug 'Chiel92/vim-autoformat'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'sjl/gundo.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'scrooloose/nerdtree'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'flazz/vim-colorschemes'
-Plug 'majutsushi/tagbar'
-Plug 'vim-scripts/taglist.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'tomtom/tcomment_vim'
-Plug 'rstacruz/sparkup' " html autogenerator
 Plug 'w0rp/ale' " formatter
 Plug 'tpope/vim-repeat'
 Plug 'tmhedberg/SimpylFold'
@@ -33,19 +27,18 @@ Plug 'tommcdo/vim-exchange' "the ultimate exchange
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'fisadev/vim-isort'
 Plug 'ekalinin/Dockerfile.vim'
-Plug 'ryanoasis/vim-devicons'
 Plug 'glts/vim-cottidie'
-Plug 'fatih/vim-go'
 Plug 'junegunn/vim-easy-align'
 Plug 'chiedo/vim-case-convert'
-Plug 'sebdah/vim-delve'
 Plug 'meain/vim-jsontogo'
 Plug 'svermeulen/vim-yoink'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " Needed to get ultisnips working
 filetype indent plugin on
-syntax on
+syntax enable
 
 "Nerdtree toggling enabled
 function OpenNERDTree()
@@ -68,11 +61,6 @@ let g:multi_cursor_next_key='<C-n>'
 let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
-
-" let g:SuperTabDefaultCompletionType = "context"
-" let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
-" let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
-" let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
 
 " Gundo toggling enabled
 nnoremap <F5> :GundoToggle<CR>
@@ -296,7 +284,7 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " >>> COC
 "
 set nohlsearch
-" let mapleader = ','
+let mapleader = ','
 
 " This is to manage preview of fzf Files command
 command! -bang -nargs=? -complete=dir Files
@@ -354,7 +342,7 @@ let g:vim_isort_python_version = 'python3'
 
 colorscheme jellybeans
 
-lua require'nvim_lsp'.rust_analyzer.setup{}
-lua require'nvim_lsp'.pyls.setup{}
-
-autocmd BufWrite * :Autoformat
+" autocmd BufWrite * :Autoformat
+let g:lightline = {
+      \ 'colorscheme': 'jellybeans',
+      \ }
