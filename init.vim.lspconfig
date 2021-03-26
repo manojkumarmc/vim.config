@@ -1,0 +1,56 @@
+
+call plug#begin()
+Plug 'itchyny/lightline.vim'
+Plug 'flazz/vim-colorschemes'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
+Plug 'tomtom/tcomment_vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+" nvim settings
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
+Plug 'nvim-lua/lsp_extensions.nvim'
+
+call plug#end()
+
+filetype indent plugin on
+syntax enable
+colorscheme jellybeans
+se number relativenumber
+
+" autocmd BufWrite * :Autoformat
+let g:lightline = {
+      \ 'colorscheme': 'jellybeans',
+      \ }
+
+" require'lspconfig'.pyright.setup{}
+lua << EOF
+	require'lspconfig'.pyright.setup{on_attach=require'completion'.on_attach}
+	require'lspconfig'.rust_analyzer.setup{on_attach=require'completion'.on_attach}
+EOF
+
+" lua require'lspconfig'.pyright.setup{on_attach=require'completion'.on_attach}
+" lua require'lspconfig'.rust_analyzer.setup{on_attach=require'completion'.on_attach}
+
+" Use <Tab> and <S-Tab> to navigate through popup menu
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" Set completeopt to have a better completion experience
+set completeopt=menuone,noinsert,noselect
+
+" Avoid showing message extra message when using completion
+set shortmess+=c
+
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy', 'all']
+
+" avoid jitter
+set signcolumn=yes
+
+" code action
+nnoremap <silent> ga    <cmd>lua vim.lsp.buf.code_action()<CR>
+nnoremap <Leader>T :lua require'lsp_extensions'.inlay_hints()
+
+set mapleader=','
+let g:completion_trigger_character = ['.', '::']
